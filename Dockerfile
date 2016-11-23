@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 RUN apt-get update && apt-get install -y openjdk-7-jre curl
 
-ENV VERSION=0.12.0
+ENV VERSION=1.5.0
 ENV MYSQL_USER=root
 ENV MYSQL_HOST=127.0.0.1
 ENV MYSQL_PORT=3306
