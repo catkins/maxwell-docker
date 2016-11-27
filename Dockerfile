@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 RUN apt-get update && apt-get install -y openjdk-7-jre curl
 
-ENV VERSION=1.5.0
+ENV VERSION=1.5.1
 
 RUN mkdir /opt/maxwell 
 WORKDIR /opt/maxwell
