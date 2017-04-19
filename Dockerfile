@@ -2,13 +2,13 @@ FROM ubuntu:14.04
 
 RUN apt-get update && apt-get install -y openjdk-7-jre curl
 
-ENV VERSION=1.5.1
+ENV VERSION=1.8.2
 
 RUN mkdir /opt/maxwell 
 WORKDIR /opt/maxwell
 
-RUN curl -sLo - https://github.com/zendesk/maxwell/releases/download/v${VERSION}/maxwell-${VERSION}.tar.gz | tar zxvf -
-RUN mv maxwell-${VERSION} ${VERSION}
+RUN curl -sLo - https://github.com/zendesk/maxwell/releases/download/v${VERSION}/maxwell-${VERSION}.tar.gz | tar zxvf - \
+      && mv maxwell-${VERSION} ${VERSION}
 
 WORKDIR /opt/maxwell/${VERSION}
 
